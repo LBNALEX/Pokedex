@@ -8,3 +8,7 @@ Altura: height
 Nombre: name
 Estadisticas: stats -> recorrer array
 Descripcion: https://pokeapi.co/api/v2/characteristic/25/ ->recorrer array y agarrar el lenguage -> name = es
+
+
+
+
