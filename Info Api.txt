@@ -1,0 +1,5 @@
+ https://pokeapi.co/api/v2/pokemon/{id}/
+
+Id: el que se manda
+Imagen: sprites -> other -> official-artwork
+Tipos: types -> recorrer el array
