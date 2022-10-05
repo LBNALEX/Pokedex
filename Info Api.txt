@@ -1,5 +1,14 @@
  https://pokeapi.co/api/v2/pokemon/{id}/
 
 Id: el que se manda
-Imagen: sprites -> other -> official-artwork
+Imagen: sprites -> other -> official-artwork (https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/434.png)
 Tipos: types -> recorrer el array
+Peso: weight
+Altura: height
+Nombre: name
+Estadisticas: stats -> recorrer array
+Descripcion: https://pokeapi.co/api/v2/characteristic/25/ ->recorrer array y agarrar el lenguage -> name = es
+
+
+
+

@@ -6,9 +6,20 @@ let alturapoke = document.getElementById('alturapoke');
 let listaTipos = document.getElementById('listaTipos');
 let listaHabilidades = document.getElementById('listaHabilidades');
 let listaEstadisticas = document.getElementById('listaEstadisticas');
+let pokebusqueda = document.getElementById('pokebusqueda');
+let btnBuscarPoke = document.getElementById('btnBuscarPoke');
 
+btnBuscarPoke.addEventListener('click', (e) => {
+    console.log(pokebusqueda.value);
+    getInfo(pokebusqueda.value).then((pokeinfo) => {
+         fillInfo(pokeinfo);
+    });
+    
+});
 
-
+getInfo(1).then((pokeinfo) => {
+    fillInfo(pokeinfo);
+});
 //Obtener peliculas
 async function getInfo(id){
     let url =` https://pokeapi.co/api/v2/pokemon/${id}/`;
@@ -20,15 +31,6 @@ async function getInfo(id){
         return [];
     }
 }
-
-getInfo("1").then((pokeinfo) => {
-    console.log(pokeinfo);
-    console.log(pokeinfo.weight);
-    console.log(pokeinfo.height);
-    console.log(pokeinfo.stats);
-
-     fillInfo(pokeinfo);
-});
 
 function fillInfo(pokeinfo){
     let tipoPoke;
