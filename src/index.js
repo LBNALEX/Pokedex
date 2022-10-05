@@ -1,7 +1,11 @@
-let idpoke = localStorage.getItem('idpoke');
-let namepoke = localStorage.getItem('namepoke');
-let imagenpoke = localStorage.getItem('imagenpoke');
+let idpoke = document.getElementById('idpoke');
+let namepoke = document.getElementById('namepoke');
+let imagenpoke = document.getElementById('imagenpoke');
+let pesopoke = document.getElementById('pesopoke');
+let alturapoke = document.getElementById('alturapoke');
 let listaTipos = document.getElementById('listaTipos');
+let listaHabilidades = document.getElementById('listaHabilidades');
+let listaEstadisticas = document.getElementById('listaEstadisticas');
 
 
 
@@ -17,43 +21,52 @@ async function getInfo(id){
     }
 }
 
-getInfo(1).then((pokeinfo) => {
-    
+getInfo("1").then((pokeinfo) => {
     console.log(pokeinfo);
-    console.log(pokeinfo.id);
-    console.log(pokeinfo.name);
-    console.log(pokeinfo.types);
-    pokeinfo.types.forEach(element => {
-        console.log(element.type.name);
-     });
-    console.log(pokeinfo.abilities);
-
-    pokeinfo.abilities.forEach(element => {
-       console.log(element.ability.name);
-    });
-
     console.log(pokeinfo.weight);
     console.log(pokeinfo.height);
-    console.log(pokeinfo.sprites.other['official-artwork']['front_default']);
-    
-    
-    // for (let i = 0; i < 10; i++){
-    //     elemento = document.createElement('li');
-    //     elemento.classList.add('nombrePeli');
-    //     elemento.id = i;
-    //     elemento.innerHTML = `${movies.cast[i].title}`;
-    //     listaPeliculas.appendChild(elemento);
-    //     elemento.addEventListener('click', () =>{
-    //         localStorage.setItem('idPelicula', movies.cast[i].id);
-    //         window.location="../../detallePelicula.html"; 
-    //     })
-    // }
+    console.log(pokeinfo.stats);
 
-    // fillInfo();
+     fillInfo(pokeinfo);
 });
 
-// function fillInfo(){
-//     namepoke.innerHTML = nameActor;
-//     imagenpoke.src = `https://image.tmdb.org/t/p/w500${fotoActor}`;
-//     imagenpoke.alt = nameActor;
-// }
+function fillInfo(pokeinfo){
+    let tipoPoke;
+    let habilidadPoke;
+    let estadisticaPoke;
+
+    idpoke.innerHTML = pokeinfo.id;
+    namepoke.innerHTML = pokeinfo.name;
+    pesopoke.innerHTML = pokeinfo.weight;
+    alturapoke.innerHTML = pokeinfo.height;
+
+    const urlImage = pokeinfo.sprites.other['official-artwork']['front_default'];
+    imagenpoke.src = urlImage;
+    imagenpoke.alt = "Pokemon: "+pokeinfo.name;
+
+    pokeinfo.types.forEach(tipo => {
+        tipoPoke = document.createElement('li');
+        //tipoPoke.classList.add('nombrePoke');
+        tipoPoke.id = tipo.type.name;
+        tipoPoke.innerHTML = tipo.type.name;
+        listaTipos.appendChild(tipoPoke);
+     });
+
+    pokeinfo.abilities.forEach(habilidad => {
+       habilidadPoke = document.createElement('li');
+        //habilidadPoke.classList.add('nombrePoke');
+        habilidadPoke.id = habilidad.ability.name;
+        habilidadPoke.innerHTML = habilidad.ability.name;
+        listaHabilidades.appendChild(habilidadPoke);
+    });
+
+    pokeinfo.stats.forEach(estadistica => {
+        estadisticaPoke = document.createElement('li');
+         //estadisticaPoke.classList.add('nombrePoke');
+         estadisticaPoke.id = estadistica["stat"]["name"];
+         estadisticaPoke.innerHTML =`${estadistica["stat"]["name"]} = ${estadistica["base_stat"]}`;
+         listaEstadisticas.appendChild(estadisticaPoke);
+     });
+}
+
+//document.addEventListener("DOMContentLoaded", getInfo);

@@ -5,28 +5,71 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://css.gg/globe-alt.css' rel='stylesheet'>
-       
-        <title>Actores</title>
-      
+        <link rel="stylesheet" href="src/css/estilos.css">
+        <link rel="stylesheet" href="src/index.css">
+        <title>Pokemon</title>
+        <link rel="shortcut icon" href="src/img/pokemonIcon.ico">
     </head>
 
     <body class="fondo">
         <header class="encabezado">
-           
+            <img src="src/img/pokemonLogo.png" alt="Netflix" class="encabezadologo" id="logo">
         </header>
-        <div class="contenido">
-            <div class="contenedorPoke">
-                <h1 class="idpoke" id="idpoke">NOMBRE</h1>
-                <h1 class="namepoke" id="namepoke">NOMBRE</h1>
-                <img  class="perfilActor" id="imagenpoke">
-            </div>
-            <div class="contenedorTipos">
-                <h1 class="tipos" id="tipos">Tipos</h1>
-                <ul class="listaTipos" id="listaTipos"></ul>
+            <div class="contenido">
+                <div class="contenedorPerfil">
+                    <div class="div-Buscar">
+                        <div class="contenidoBuscar">
+                            <p>buscar</p>
+                        </div>
+                        <div class="contenidoBuscar">
+                            <input type="text" placeholder="ID o Nombre">
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="detallePokemon asd">Caracteristicas Pokemon</h1>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon" id="idpoke">Numero Pokedex</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon">#5</h3>
+                        </div>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon" id="namepoke">NOMBRE</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon">Charmander</h3>
+                        </div>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon">Dimensiones</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon">peso</h3>
+                            <h3 class="nombre-Poke Poke detallePokemon" id="pesopoke">100KG</h3>
+                            <h3 class="nombre-Poke Poke detallePokemon">altura</h3>
+                            <h3 class="nombre-Poke Poke detallePokemon" id="alturapoke">8M</h3>
+                        </div>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon">Estadisticas</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon" id="listaEstadisticas">asdads</h3>
+                        </div>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon">Tipo(S)</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon" id="listaTipos">Fuego</h3>
+                        </div>
+                        <div>
+                            <h1 class="tituloNombre-Poke Poke detallePokemon">Habilidades</h1>
+                            <h3 class="nombre-Poke Poke detallePokemon" id="listaHabilidades">Puño de Fuego</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedorPokemon-Imagen">
+                    <div class="div-ButtonBuscar">
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <h1 class="TituloimagenPokemon cardImagenPoke" id="imagenPokemon">Imagen Pokemon</h1>
+                    <img class="imagenPoke cardImagenPoke" id="imagenpoke">
+                </div>
             </div>
         </div>
+        
+        
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="src/index.js"></script>    
+        
     </body>
 </html>

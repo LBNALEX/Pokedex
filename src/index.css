@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/*Login*/
+.fondo{
+    /* width: 90%; */
+    height: 100vh;
+    position: relative;
+    background-image:  url("../src/img/pokemonFondo.jpg");
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fondo:before {
+	content:'';
+    height: 100vh;
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.encabezado{
+    position:absolute ;
+    top: 0;
+}
+
+.encabezadologo{
+    width: 145px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row; 
+    width: 78vw;
+    height: 70vh;
+    background-color: rgba(0,0,0,.5);
+    padding-top: 60px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+    padding-left: 68px;
+    margin-bottom: 90px;
+    border-radius: 4px;
+    position: absolute;
+    top: 70px;
+    left: 100px;
+}
+
+
+.asd{
+    margin: 9px !important;
+    width: 40vw;
+}
+.detallePokemon{
+    color:white;
+    display: block;
+    font-size: 25px;
+    margin-left: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid green;
+}
+.Poke{
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+}
+.imagenPoke{
+    height: 40vh;
+}
+.cardImagenPoke{
+    border: 3px solid green;
+    color: white;
+    font-size: 25px;
+    margin-left: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.perfilActor{
+    width: 300px;
+    height: 250px;
+    margin-left: 110px;
+    border: 0px;
+    display: inline;
+}
+
+.div-Buscar{
+    color: white; 
+    margin-left: 30px;
+    height: 30px;
+    text-align: end;
+    border: 1px solid green;
+}
+.contenidoBuscar{
+    display: inline-block;
+    margin-left: 20px;    
+}
+p{
+    margin: 0px !important;
+}
+.div-ButtonBuscar{
+    margin-left: 40px;
+    border: 1px solid red;
+}
+.contenedorPokemon-Imagen{
+    width: 40vw;
+}
