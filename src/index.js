@@ -8,14 +8,66 @@ let listaHabilidades = document.getElementById('listaHabilidades');
 let listaEstadisticas = document.getElementById('listaEstadisticas');
 let pokebusqueda = document.getElementById('pokebusqueda');
 let btnBuscarPoke = document.getElementById('btnBuscarPoke');
+let contenedorPerfil = document.getElementById('contenedorPerfil')
+let contenedorPerfil1 = document.getElementById('contenedorPerfil1')
+const alertaEspacio = document.getElementById('liveAlertPlaceholder');
 
-btnBuscarPoke.addEventListener('click', (e) => {
-    console.log(pokebusqueda.value);
-    getInfo(pokebusqueda.value).then((pokeinfo) => {
-         fillInfo(pokeinfo);
-    });
+if(btnBuscarPoke){
+    btnBuscarPoke.addEventListener('click', (e) => {
+        listaEstadisticas.innerHTML = '';
+        listaTipos.innerHTML = '';
+        listaHabilidades.innerHTML = '';
+        getInfo(pokebusqueda.value.toLowerCase()).then((pokeinfo) => {
+             fillInfo(pokeinfo);
+        }).catch((error) =>{
+            const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-danger alert-dismissible" role="alert">`,
+        `   <div>El Pokémon no existe</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+      alertaEspacio.append(wrapper);
+        });
     
-});
+        pokebusqueda.value = '';
+        
+    });
+}
+
+if(pokebusqueda){
+    pokebusqueda.addEventListener('keypress', (e) => {
+        if(e.key ==="Enter"){
+            listaEstadisticas.innerHTML = '';
+            listaTipos.innerHTML = '';
+            listaHabilidades.innerHTML = '';
+
+            //Spinner
+            var contenidoPadre = document.getElementById('contenido');
+            const divSpinner = document.createElement('div');
+            divSpinner.classList.add('spinner');
+
+
+            getInfo(pokebusqueda.value.toLowerCase()).then((pokeinfo) => {
+            fillInfo(pokeinfo);
+        }).catch((error) =>{
+            const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-danger alert-dismissible" role="alert">`,
+        `   <div>El Pokémon no existe</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+      alertaEspacio.append(wrapper);
+        });
+    
+        pokebusqueda.value = '';
+        }        
+    });
+}
+
+
+
 
 getInfo(1).then((pokeinfo) => {
     fillInfo(pokeinfo);
@@ -36,11 +88,13 @@ function fillInfo(pokeinfo){
     let tipoPoke;
     let habilidadPoke;
     let estadisticaPoke;
+    let peso = pokeinfo.weight / 10;
+    let altura = pokeinfo.height / 10;
 
     idpoke.innerHTML = pokeinfo.id;
     namepoke.innerHTML = pokeinfo.name;
-    pesopoke.innerHTML = pokeinfo.weight;
-    alturapoke.innerHTML = pokeinfo.height;
+    pesopoke.innerHTML = `${peso} KG`;
+    alturapoke.innerHTML =`${altura} M`;
 
     const urlImage = pokeinfo.sprites.other['official-artwork']['front_default'];
     imagenpoke.src = urlImage;
