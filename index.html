@@ -25,54 +25,69 @@
             </nav>
         </header>
             <div class="contenido" id="contenido">
-                <div class="contenedorPerfil" id="contenedorPerfil">
+                <div id="contenedorPerfil">
                         <h1 class="pokeDetalle">Caracteristicas Pokemon</h1>
-                        <div>
-                           <h3 class="nombre-Poke Poke detallePokemon" id="idpoke"></h3>
-                           <h3 class="nombre-Poke Poke detallePokemon" id="namepoke"></h3>
+                        <div class="divCenter pokeDimensiones" style="background-color: rgba(255, 0, 212, 0.432); border-radius: 5px;">
+                                <h3 class="nombre-Poke Poke detallePokemon" id="idpoke" style="display: inline;"></h3>
+                                <h3 class="nombre-Poke Poke detallePokemon" id="namepoke"></h3>
                         </div>
-                        <div class= "pokeDimensiones">
-                            <div style="text-align: center;">
-                                <div style=" text-align: center;">
+                        <div class= "pokeDimensiones" style="margin-top: 15px;">
+                            <div class="divCenter" style="background-color: rgba(255, 0, 0, 0.452); border-radius: 5px;">
+                                <div class="divCenter">
                                     <h1 class="dimensiones">Dimensiones</h1>
                                 </div>
-                                <div style="text-align: center;">
-                                    <div style="display: inline-block;">
-                                        <div style="display: inline-block;">
-                                            <h3 class="nombre-Poke dimensiones">Peso:</h3>
+                                <div class="divCenter">
+                                        <div class="divDisplayBlock" style="width: 20vw;">
+                                            <div class="divDisplayBlock" style="width: 8vw;">
+                                                <h3 class="nombre-Poke dimensiones">Peso:</h3>
+                                            </div>
+                                            <div class="divDisplayBlock" style="width: 8vw;">
+                                                <h3 class="nombre-Poke dimensiones" id="pesopoke"></h3>
+    
+                                            </div>
                                         </div>
-                                        <div style="display: inline-block;">
-                                            <h3 class="nombre-Poke dimensiones" id="pesopoke"></h3>
-
+                                        <div class="divDisplayBlock" style="width: 20vw;">
+                                            <div class="divDisplayBlock" style="width: 8vw;"> 
+                                                <h3 class="nombre-Poke dimensiones">Altura:</h3>
+                                            </div>
+                                            <div class="divDisplayBlock" style="width: 8vw;">
+                                                <h3 class="nombre-Poke dimensiones" id="alturapoke"></h3>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h3 class="nombre-Poke dimensiones">Altura:</h3>
-                                        <h3 class="nombre-Poke dimensiones" id="alturapoke"></h3>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="divEstadisticas" style="text-align: center;">
+                        <div class="divCenter divMargin">
+                                <div style="background-color:rgba(0, 208, 255, 0.541); border-radius: 5px;">
+                                    <div>
+                                        <h1 class="tituloNombre-Poke Poke detallePokemon estadisticas">Estadisticas</h1>
+                                    </div>
+                                    <div>
+                                        <h3 class="Poke detalleEstadisticas" id="listaEstadisticas"></h3>
+                                    </div> 
+                                </div>
+                        </div>
+                        <div class="divCenter divMargin">
+                            <div style="background-color:  rgba(225, 255, 0, 0.541); border-radius: 5px;">
+                                <div>
+                                    <h1 class="tituloNombre-Poke Poke detallePokemon">Tipo(S)</h1>
+                                </div>
+                                <div>
+                                    <h3 class="Poke detallePokemon" id="listaTipos"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divCenter divMargin" style="background-color:rgba(174, 0, 255, 0.541); border-radius: 5px;">
                             <div>
-                                <h1 class="tituloNombre-Poke Poke detallePokemon estadisticas">Estadisticas</h1>
+                                <h1 class="tituloNombre-Poke Poke detallePokemon">Habilidades</h1>
                             </div>
-                            <div style="border: 1px solid red;">
-                                <h3 class="nombre-Poke Poke detalleEstadisticas" id="listaEstadisticas"></h3>
+                            <div>
+                                <h3 class="nombre-Poke Poke detalleHabilidades" id="listaHabilidades"></h3>
                             </div>
-                        </div>
-                        <div class="divTipos" style="display: inline-block;">
-                                <h1 class="tituloNombre-Poke Poke detallePokemon">Tipo(S)</h1>
-                                <h3 class="nombre-Poke Poke detallePokemon" id="listaTipos"></h3>
-                        </div>
-                        <div class="divHabilidades">
-                            <h1 class="tituloNombre-Poke Poke detallePokemon">Habilidades</h1>
-                            <h3 class="nombre-Poke Poke detallePokemon" id="listaHabilidades"></h3>
                         </div>
                 </div>
                 <div class="contenedorPokemon-Imagen" id="contenedorPerfil1">
                     
-                    <h1 class="TituloimagenPokemon cardImagenPoke" id="imagenPokemon">Imagen Pokemon</h1>
                     <img class="imagenPoke cardImagenPoke" alt="pokemon" id="imagenpoke">
                 </div>
                 <div id="liveAlertPlaceholder" class="msjError"></div>
