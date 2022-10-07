@@ -92,13 +92,10 @@ if (pokebusqueda) {
     });
 }
 
-
-
-
 getInfo(1).then((pokeinfo) => {
     fillInfo(pokeinfo);
 });
-//Obtener peliculas
+//Obtener Pokemons
 async function getInfo(id) {
     let url = ` https://pokeapi.co/api/v2/pokemon/${id}/`;
 
@@ -128,7 +125,6 @@ function fillInfo(pokeinfo) {
 
     pokeinfo.types.forEach(tipo => {
         tipoPoke = document.createElement('li');
-        //tipoPoke.classList.add('nombrePoke');
         tipoPoke.id = tipo.type.name;
         tipoPoke.innerHTML = tipo.type.name;
         listaTipos.appendChild(tipoPoke);
@@ -136,7 +132,6 @@ function fillInfo(pokeinfo) {
 
     pokeinfo.abilities.forEach(habilidad => {
         habilidadPoke = document.createElement('li');
-        //habilidadPoke.classList.add('nombrePoke');
         habilidadPoke.id = habilidad.ability.name;
         habilidadPoke.innerHTML = habilidad.ability.name;
         listaHabilidades.appendChild(habilidadPoke);
@@ -144,7 +139,6 @@ function fillInfo(pokeinfo) {
 
     pokeinfo.stats.forEach(estadistica => {
         estadisticaPoke = document.createElement('li');
-        //estadisticaPoke.classList.add('nombrePoke');
         estadisticaPoke.id = estadistica["stat"]["name"];
         estadisticaPoke.innerHTML = `${estadistica["stat"]["name"]} = ${estadistica["base_stat"]}`;
         listaEstadisticas.appendChild(estadisticaPoke);
