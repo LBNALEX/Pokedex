@@ -33,7 +33,7 @@ body {
     cursor: pointer;
 }
 
-.contenido{
+.contenido {
     display: flex;
     flex-direction: row;
     width: 90vw;
@@ -48,6 +48,7 @@ body {
     top: 70px;
     left: 70px;
 }
+
 .pokeDetalle {
     width: 100%;
     color: white;
@@ -57,16 +58,20 @@ body {
     font-weight: bold;
     text-align: center;
 }
-.divCenter{
+
+.divCenter {
     text-align: center;
 }
-.divDisplayBlock{
+
+.divDisplayBlock {
     display: inline-block;
 }
-.divMargin{
-    margin-left: 30px; 
+
+.divMargin {
+    margin-left: 30px;
     margin-top: 15px;
 }
+
 .detallePokemon {
     color: white;
     display: block;
@@ -76,7 +81,8 @@ body {
     text-align: center;
     width: 200px;
 }
-.detalleHabilidades{
+
+.detalleHabilidades {
     color: white;
     display: inline-block;
     font-size: 25px;
@@ -85,6 +91,7 @@ body {
     text-align: center;
     width: 20vw;
 }
+
 .Poke {
     display: inline-block;
     color: white;
@@ -104,18 +111,19 @@ body {
     text-align: center;
 
 }
-.contenedorPokemon-Imagen{
+
+.contenedorPokemon-Imagen {
     width: 50vw;
 }
 
-.msjError{
+.msjError {
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
 /*Empieza Codigo del spinner*/
-.spinner{
+.spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     width: 36px;
     height: 36px;
@@ -128,7 +136,7 @@ body {
     animation: spin 1s ease infinite;
 }
 
-@keyframes spin{
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
@@ -137,10 +145,11 @@ body {
         transform: rotate(360deg);
     }
 }
+
 /*Termina Codigo del spinner*/
 
 /*Empieza Codigo de las dimensiones*/
-.dimensiones{
+.dimensiones {
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -148,27 +157,35 @@ body {
     display: inline;
 }
 
-.pokeDimensiones{
+.pokeDimensiones {
     color: white;
     font-size: 15px;
     margin-left: 30px;
     font-weight: bold;
     text-align: center;
 }
+
 /*Termina Codigo de las dimensiones*/
 
 /*Empieza codigo dee tiquetas*/
-li{
+li {
     display: inline-block;
     width: 9vw;
 }
-li#special-attack, #hp, #attack, #defense, #special-defense, #speed{
+
+li#special-attack,
+#hp,
+#attack,
+#defense,
+#special-defense,
+#speed {
     display: inline-block;
     width: 14vw;
     font-size: 14px;
     font-weight: bold;
     color: white;
 }
+
 .detalleEstadisticas {
     color: white;
     display: inline-block;
@@ -176,118 +193,176 @@ li#special-attack, #hp, #attack, #defense, #special-defense, #speed{
     margin-left: 30px;
     font-weight: bold;
 }
-p{
+
+p {
     margin: 0px !important;
 }
+
 /*Termina codigo de etiquetas*/
 
 /*ID de Tipos*/
-#grass{
+#grass {
     background-color: #9bcc50;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#poison{
+
+#poison {
     background-color: #b97fc9;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#fire{
+
+#fire {
     background-color: #fd7d24;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#flying{
+
+#flying {
     background-color: #bdb9b8c8;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#water{
+
+#water {
     background-color: #4592c4;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#normal{
+
+#normal {
     background-color: #a4acaf;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#electric{
+
+#electric {
     background-color: rgba(255, 255, 0, 0.61);
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#ground{
+
+#ground {
     background-color: #ab9842;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#psychic{
-    background-color:#f366b9;
+
+#psychic {
+    background-color: #f366b9;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#ice{
-    background-color:#51c4e7;
+
+#ice {
+    background-color: #51c4e7;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#steel{
+
+#steel {
     background-color: #9eb7b8;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#ghost{
+
+#ghost {
     background-color: #7b62a3;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#dragon{
+
+#dragon {
     background-color: #f16e57;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#dark{
+
+#dark {
     background-color: #707070;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#bug{
+
+#bug {
     background-color: #729f3f;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#fairy{
+
+#fairy {
     background-color: #fdb9e9;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#fighting{
+
+#fighting {
     background-color: #d56723;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-#rock{
+
+#rock {
     background-color: #a38c21;
     border-radius: 5px;
     width: 5vw;
     margin-left: 10px;
 }
-/*Termina Codigo de los tipos*/
+
+.marginDimensiones {
+    margin-top: 15px;
+}
+
+.displayinline {
+    display: inline;
+}
+
+.dimensiones20vW {
+    width: 20vw;
+}
+
+.dimensiones8vW {
+    width: 8vw;
+}
+
+.borderRadius5 {
+    border-radius: 5px;
+}
+
+.fondoid {
+    background-color: rgba(255, 0, 212, 0.432);
+}
+
+.fondoDimensiones {
+    background-color: rgba(255, 0, 0, 0.452);
+}
+
+.fondoEstadisticas {
+    background-color: rgba(0, 208, 255, 0.541);
+}
+
+.fondoTipos {
+    background-color: rgba(225, 255, 0, 0.541);
+}
+
+.fondoHabilidades {
+    background-color: rgba(174, 0, 255, 0.541);
+}

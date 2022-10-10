@@ -18,7 +18,7 @@ let logo = document.getElementById('logo');
 logo.addEventListener('click', (e) => {
     localStorage.removeItem('idPoke');
     window.open('http://127.0.0.1:5501/index.html', "_self");
-    
+
 });
 
 
@@ -169,5 +169,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 500);
 
 
-    
+
 });

@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://css.gg/globe-alt.css' rel='stylesheet'>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="src/css/index.css">
-        <title>Pokemon</title>
-        <link rel="shortcut icon" href="src/img/pokemonIcon.ico">
-    </head>
 
-    <body >
-        <header>
-            <nav class="navbar bg-dark">
-                <div class="container-fluid">
-                    <img src="src/img/pokemonLogo.png" alt="Pokemon" class="encabezadologo" id="logo">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Id/Pokémon"
-                            aria-label="Search" id="pokebusqueda">
-                        <button class="btn btn-outline-success" type="submit" id="btnBuscarPoke">Buscar</button>
-                    </form>
-                </div>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/globe-alt.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/index.css">
+    <title>Pokemon</title>
+    <link rel="shortcut icon" href="src/img/pokemonIcon.ico">
+</head>
 
-        <div id="principal">
-            <section class="contenedor seccion" id="seccionPokedex">
-                <h2>Pokedex</h2>
-                <ul class="lista-pokemon milista" id="milista">
-                </ul>
-              </section>
+<body>
+    <header>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <img src="src/img/pokemonLogo.png" alt="Pokemon" class="encabezadologo" id="logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Id/Pokémon" aria-label="Search"
+                        id="pokebusqueda">
+                    <button class="btn btn-outline-success" type="submit" id="btnBuscarPoke">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div id="principal">
+        <div class="maspokes">
+            <a href="" class="siguiente" id="siguiente">Ver más</a>
         </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="src/js/index.js"></script>
-    </body>
+        <section class="contenedor seccion" id="seccionPokedex">
+            <h2>Pokedex</h2>
+            <ul class="lista-pokemon milista" id="milista">
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
 </html>
