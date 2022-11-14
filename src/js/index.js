@@ -8,6 +8,18 @@ let cantidadPokes = 0;
 let opcion = 1;
 
 
+function getInfo(url){
+    return new Promise((resolve,reject) =>{
+        axios
+            .get(url)
+            .then((response) => {
+                resolve(response.data);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+}
 
 getInfo(url).then((pokeinfo) => {
     pokeinfo.forEach(enlace => {
@@ -64,9 +76,7 @@ async function getImages(url) {
 }
 
 function fillInfo(pokeinfo) {
-    pokeinfo.sort((a, b) => {
-        return a.id - b.id;
-    });
+    pokeinfo.sort((a, b) =>   a.id - b.id);
 
     const seccion = document.getElementById('seccionPokedex');
     let ul = document.getElementById('milista');
@@ -74,6 +84,7 @@ function fillInfo(pokeinfo) {
     let div;
     let img;
     let p;
+    let btn;
 
     pokeinfo.forEach(element => {
         li = document.createElement('li');
@@ -93,7 +104,7 @@ function fillInfo(pokeinfo) {
 
         div.addEventListener('click', () => {
             localStorage.setItem('idPoke', element.id);
-            window.open('http://127.0.0.1:5501/pokemon.html', "_self");
+            window.open('./pokemon.html', "_self");
         });
 
     });
@@ -104,7 +115,6 @@ function fillInfo(pokeinfo) {
         cantidadPokes = cantidadPokes - 20;
     }
 
-    seccion.appendChild(ul);
 
 }
 
@@ -112,7 +122,7 @@ if (btnBuscarPoke) {
     btnBuscarPoke.addEventListener('click', (e) => {
         e.preventDefault();
         localStorage.setItem('idPoke', pokebusqueda.value.toLowerCase());
-        window.open('http://127.0.0.1:5501/pokemon.html', "_self");
+        window.open('./pokemon.html', "_self");
         //pokebusqueda.value = '';
 
     });
@@ -123,7 +133,7 @@ if (pokebusqueda) {
         if (e.key === "Enter") {
             e.preventDefault();
             localStorage.setItem('idPoke', pokebusqueda.value.toLowerCase());
-            window.open('http://127.0.0.1:5501/pokemon.html', "_self");
+            window.open('./pokemon.html', "_self");
             //pokebusqueda.value = '';
         }
     });
