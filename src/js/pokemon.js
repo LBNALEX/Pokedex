@@ -17,7 +17,7 @@ let logo = document.getElementById('logo');
 //regresar a la pokedex
 logo.addEventListener('click', (e) => {
     localStorage.removeItem('idPoke');
-    window.open('http://127.0.0.1:5501/index.html', "_self");
+    window.open('./index.html', "_self");
 
 });
 
