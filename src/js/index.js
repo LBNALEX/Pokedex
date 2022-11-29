@@ -17,18 +17,18 @@ let cantidadPokes = 0;
 let opcion = 1;
 
 
-function getInfo(url){
-    return new Promise((resolve,reject) =>{
-        axios
-            .get(url)
-            .then((response) => {
-                resolve(response.data);
-            })
-            .catch((error) => {
-                reject(error);
-            });
-    });
-}
+// function getInfo(url){
+//     return new Promise((resolve,reject) =>{
+//         axios
+//             .get(url)
+//             .then((response) => {
+//                 resolve(response.data);
+//             })
+//             .catch((error) => {
+//                 reject(error);
+//             });
+//     });
+// }
 
 getInfo(url).then((pokeinfo) => {
     pokeinfo.forEach(enlace => {
@@ -89,6 +89,7 @@ function fillInfo(pokeinfo) {
 
     const seccion = document.getElementById('seccionPokedex');
     let ul = document.getElementById('milista');
+    ul.innerHTML = '';
     let li;
     let div;
     let img;
@@ -141,42 +142,51 @@ if (btnBuscarPoke) {
 if (btnKanto) {
     btnKanto.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(0);
     });
 }
 if (btnJohto) {
     btnJohto.addEventListener('click', (e) => {
         e.preventDefault();
+        document.getElementById("btnKanto").checked = false;
+        getPokeByRegion(151);
     });
 }
 if (btnHoenn) {
     btnHoenn.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(251);
     });
 }
 if (btnSinnoh) {
     btnSinnoh.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(386);
     });
 }
 if (btnTeselia) {
     btnTeselia.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(493);
     });
 }
 
 if (btnKalos) {
     btnKalos.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(649);
     });
 }
 if (btnAlola) {
     btnAlola.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(721);
     });
 }
 if (btnGalar) {
     btnGalar.addEventListener('click', (e) => {
         e.preventDefault();
+        getPokeByRegion(809);
     });
 }
 
@@ -230,4 +240,34 @@ if (siguiente) {
             console.log(error);
         });
     });
+}
+
+function getPokeByRegion(pokenum){
+    let qtyarray = arrayPokeUrl.length;
+    for (let index = 0; index < qtyarray; index++) {
+        arrayPokeUrl.pop();
+
+    }
+    url = `https://pokeapi.co/api/v2/pokemon/?offset=${pokenum}&limit=20`;
+        getInfo(url).then((pokeinfo) => {
+            pokeinfo.forEach(enlace => {
+                getData(enlace.url)
+                    .then((data) => {
+                        arrayPokeUrl.push(data);
+                        return arrayPokeUrl;
+                    })
+                    .then((urlImages) => {
+                        if (urlImages.length == 20) {
+                            fillInfo(urlImages);
+
+                        }
+                    })
+                    .catch((error) => {
+                        console.log("Error ", error);
+                    });
+            });
+
+        }).catch((error) => {
+            console.log(error);
+        });
 }
