@@ -150,3 +150,30 @@ h2 {
 .alinearRegiones{
   width:100%;
 }
+
+.regiones{
+  display:flex ;
+  flex-direction: column;
+}
+
+
+@media(min-width:480px) {
+  .regiones {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media(min-width:768px) {
+  .regiones {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
