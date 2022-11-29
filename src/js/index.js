@@ -1,7 +1,16 @@
 let url = ` https://pokeapi.co/api/v2/pokemon/`;
 let arrayPokeUrl = [];
 let pokebusqueda = document.getElementById('pokebusqueda');
-let btnBuscarPoke = document.getElementById('btnBuscarPoke');
+let btnBuscarPoke = document.getElementById('btnBuscarPoke'); 
+let btnKanto = document.getElementById('btnKanto');
+let btnJohto = document.getElementById('btnJohto');
+let btnHoenn = document.getElementById('btnHoenn');
+let btnSinnoh = document.getElementById('btnSinnoh');
+let btnTeselia = document.getElementById('btnTeselia');
+let btnKalos = document.getElementById('btnKalos');
+let btnAlola = document.getElementById('btnAlola');
+let btnGalar = document.getElementById('btnGalar');
+
 let anterior = document.getElementById('anterior');
 let siguiente = document.getElementById('siguiente');
 let cantidadPokes = 0;
@@ -127,6 +136,50 @@ if (btnBuscarPoke) {
 
     });
 }
+
+/* KANTO */
+if (btnKanto) {
+    btnKanto.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnJohto) {
+    btnJohto.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnHoenn) {
+    btnHoenn.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnSinnoh) {
+    btnSinnoh.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnTeselia) {
+    btnTeselia.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+
+if (btnKalos) {
+    btnKalos.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnAlola) {
+    btnAlola.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+if (btnGalar) {
+    btnGalar.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
+
 
 if (pokebusqueda) {
     pokebusqueda.addEventListener('keypress', (e) => {
